@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CR2-Image-Engine for 釣王国</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <section id="title">
+        <h1 id="h1-title">CR2-Image-Engine</h1>
+        <h2 id="h2-subtitle">リネーム・リサイズ・圧縮を１クリックで。</h2>
+        <p>「おきなわ釣王国」の記事作成作業の画像のJPG化と圧縮、リネーム・リサイズ作業を一括化できるツールです。</p>
+    </section>
+    <main class="container">
+        <section id="set2drop">
+            <article id="seting">
+                <div class="controls">
+                    <h2 class="category">加工カテゴリ</h2>
+                    <label><input type="radio" name="mode" value="hero"> アイキャッチ (1200x630)</label>
+                    <label><input type="radio" name="mode" value="body" checked> 本文画像 (幅1200)</label>
+                </div>
+                <div class="controls" id="naming-section">
+                    <div class="header-flex">
+                        <h2 class="category">ファイル名</h2>
+                        <label class="switch">
+                            <input type="checkbox" id="rename-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div id="rename-inputs">
+                        <input type="text" id="baseName" placeholder="共通ファイル名 (例: fish)">
+                        <label id="number">開始番号: <input type="number" id="startIndex" value="1" min="1"></label>
+                    </div>
+                </div>
+            </article>
+            <article id="drop">
+                <input type="file" id="file-input" multiple accept="image/*,.heic">
+                <div id="drop-zone">
+                    ここに複数の画像をドロップ、<br>またはクリックして選択
+                </div>
+            </article>
+        </section>
+        <section id="execution">
+            <button id="start-btn">
+                一括変換を開始してZIPダウンロード
+            </button>
+            <p id="status">待機中...</p>
+
+            <div id="preview"></div>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
