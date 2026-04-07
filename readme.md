@@ -4,7 +4,8 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 
-**CR2-Image-Engine** は、Webメディア「おきなわ釣王国」の記事作成フローを効率化するために開発された、ブラウザ完結型の画像一括加工ツールです。
+**CR2-Image-Engine** は、Webメディア「おきなわ釣王国」の記事作成フローを効率化するために開発された、ブラウザ完結型の画像一括加工ツールです。  
+[CR2-Image-Engine](https://t0ugarashi.github.io/CR2-Image-Engine_for-Tsuriokoku/)
 
 ---
 
